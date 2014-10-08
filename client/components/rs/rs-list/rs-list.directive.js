@@ -16,8 +16,8 @@ angular.module('componentdemoApp')
           console.log('you entered into the element');
         });
 
-        var Config = attrs.config ? $injector.get(attrs.config) : function(){};
-        Config(scope, element, attrs, ctrl);
+        // var Config = attrs.config ? $injector.get(attrs.config) : function(){};
+        // Config(scope, element, attrs, ctrl);
 
       }
     };

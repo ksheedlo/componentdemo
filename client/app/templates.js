@@ -25,17 +25,7 @@ angular.module('componentdemoApp').run(['$templateCache', function($templateCach
 
 
   $templateCache.put('app/main/main.html',
-    "<div class=container><div class=row><div class=col-lg-12><h1 class=page-header>List: All Things</h1><rs-list config=thingListConfig><rs-list-item config=thingListItemConfig ng-repeat=\"thing in things\"><div class=rs-list-primary><div class=rs-tile-content><h2>{{thing.name}} - {{thing.userId}}</h2><p ng-click=closeAll() ng-bind-html=thing.info></p></div></div><div class=rs-list-secondary><div class=icon-container rs-offcanvas=customOffcanvas><i class=\"fa fa-align-justify\"></i></div><div class=icon-container><i class=\"fa fa-info\"></i></div><div class=icon-container><button type=button class=close ng-click=deleteThing(thing)>&times;</button></div></div></rs-list-item></rs-list><button rs-popover-trigger=myPopoverForm>Toggle Me!</button><rs-popover-form id=myPopoverForm><div class=rs-control-group><label>Label</label><div class=rs-controls><input></div></div></rs-popover-form></div></div><form class=thing-form><label>Syncs in realtime across clients</label><p class=input-group><input class=form-control placeholder=\"Add a new thing here.\" ng-model=newThing> <span class=input-group-btn><button type=submit class=\"btn btn-primary\" ng-click=addThing()>Add New</button></span></p></form></div><footer class=footer><div class=container><p>Angular Fullstack v2.0.13 | <a href=https://twitter.com/tyhenkel>@tyhenkel</a> | <a href=\"https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open\">Issues</a></p></div></footer>"
-  );
-
-
-  $templateCache.put('components/Config/thingInfoPopoverConfig/thingInfoPopoverConfig.html',
-    "<div class=popover-container><div class=popover-header><h3>Popover Header</h3></div><div class=popover-content><p>the content</p></div><div class=popover-footer><button class=\"btn btn-primary\" ng-click=close()>yes</button></div></div>"
-  );
-
-
-  $templateCache.put('components/Config/thingInfoPopoverConfig/thingInfoPopoverConfigAlt.html',
-    "<h1>this is the other one</h1>"
+    "<div class=container><div class=row><div class=col-lg-8><h1 class=page-header>List: All Things</h1><rs-list config=thingListConfig><rs-list-item config=thingListItemConfig ng-repeat=\"thing in things\"><div class=rs-list-primary><div class=rs-tile-content><h2>{{thing.name}}</h2><p ng-click=closeAll() ng-bind-html=thing.info></p></div></div><div class=rs-list-secondary><div class=btn-group><button type=button class=\"btn btn-sm btn-default\" ng-click=deleteThing(thing)><i class=\"fa fa-times\"></i> Remove</button></div></div></rs-list-item></rs-list></div><div class=col-lg-4><form class=\"thing-form well\"><label>Add a new thing</label><div class=form-group><label>Name</label><input class=form-control placeholder=\"Add a new thing here.\" ng-model=newThing.name></div><div class=form-group><label>Info</label><input class=form-control placeholder=\"Add some info to your thing.\" ng-model=newThing.info></div><p class=form-group><button type=submit class=\"btn btn-primary\" ng-click=addThing()>Add New</button></p></form></div></div></div><footer class=footer><div class=container><p>Angular Fullstack v2.0.13 | <a href=https://twitter.com/tyhenkel>@tyhenkel</a> | <a href=\"https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open\">Issues</a></p></div></footer>"
   );
 
 
@@ -51,16 +41,6 @@ angular.module('componentdemoApp').run(['$templateCache', function($templateCach
 
   $templateCache.put('components/rs/rs-list/rs-list.html',
     "<div>this is the rsList directive</div>"
-  );
-
-
-  $templateCache.put('components/rs/rs-offcanvas/rs-offcanvas.html',
-    "<div>this is the rsOffcanvas directive</div>"
-  );
-
-
-  $templateCache.put('components/rs/rs-popover/rs-popover.html',
-    "<div>this is the rsPopover directive</div>"
   );
 
 }]);

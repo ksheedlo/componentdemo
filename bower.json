@@ -15,8 +15,7 @@
     "angular-socket-io": "~0.6.0",
     "angular-ui-router": "~0.2.10",
     "reflux": "~0.1.12",
-    "velocity": "~1.1.0",
-    "rs-popover": "https://github.com/rackerlabs/rs-popover.git"
+    "velocity": "~1.1.0"
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",

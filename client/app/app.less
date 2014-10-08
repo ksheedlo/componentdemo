@@ -22,7 +22,78 @@
 @import 'rs/rs-fonts.less';
 @import 'rs/rs-list-item/rs-list-item.less';
 @import 'rs/rs-list/rs-list.less';
-@import 'rs/rs-offcanvas/rs-offcanvas.less';
-@import 'rs/rs-popover/rs-popover.less';
 @import 'rs/rs-util.less';
 // endinjector
+
+
+/* line 1, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover {
+  position: absolute;
+  max-width: 700px;
+  z-index: 1000;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* line 9, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 990;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 20, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-arrow-top-left {
+  top: -6px;
+  left: 24px;
+}
+
+/* line 25, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-arrow-top-right {
+  top: -6px;
+  right: 24px;
+}
+
+/* line 30, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-arrow-left-top {
+  top: 24px;
+  left: -6px;
+}
+
+/* line 35, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-arrow-right-top {
+  top: 24px;
+  right: -6px;
+}
+
+/* line 40, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-content {
+  position: relative;
+  background-color: white;
+  z-index: 1000;
+}
+
+/* line 46, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-body {
+  padding: 20px 20px 0;
+  margin: 0 0 20px;
+}
+
+/* line 51, ../lib/stylesheets/patterns/_popover.scss */
+.rs-popover-footer {
+  padding: 10px 20px;
+  margin: 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
