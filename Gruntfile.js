@@ -1,4 +1,4 @@
-// Generated on 2014-10-01 using generator-angular-fullstack 2.0.13
+// Generated on 2014-09-11 using generator-angular-fullstack 2.0.13
 'use strict';
 
 module.exports = function (grunt) {
@@ -92,6 +92,13 @@ module.exports = function (grunt) {
       },
       gruntfile: {
         files: ['Gruntfile.js']
+      },
+      //ADDED html watch for template files, run ngtemplates task
+      html: {
+        files:[
+        '<%= yeoman.client %>/{app,components}/**/*.html',
+        ],
+        tasks:['ngtemplates']
       },
       livereload: {
         files: [
@@ -325,7 +332,8 @@ module.exports = function (grunt) {
       main: {
         cwd: '<%= yeoman.client %>',
         src: ['{app,components}/**/*.html'],
-        dest: '.tmp/templates.js'
+        // dest: '.tmp/templates.js'
+        dest: 'client/app/templates.js' //added templates
       },
       tmp: {
         cwd: '.tmp',
@@ -580,6 +588,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'env:all',
+      'ngtemplates',//added ngtemplates      
       'injector:less', 
       'concurrent:server',
       'injector',

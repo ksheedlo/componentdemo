@@ -8,7 +8,11 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 
+
 Thing.find({}).remove(function() {
+var i = 0;
+while(i<1) {
+
   Thing.create({
     name : 'Development Tools',
     info : 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
@@ -28,6 +32,9 @@ Thing.find({}).remove(function() {
     name : 'Deployment Ready',
     info : 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgenerators'
   });
+  
+  i++;
+}
 });
 
 User.find({}).remove(function() {
@@ -36,7 +43,32 @@ User.find({}).remove(function() {
     name: 'Test User',
     email: 'test@test.com',
     password: 'test'
-  }, {
+  }, 
+  {
+    provider: 'local',
+    name: 'eric',
+    email: 'eric.mcgregor@gmail.com',
+    password: 'password'
+  }, 
+    {
+    provider: 'local',
+    name: 'brad',
+    email: 'brad.gignac@rackspace.com',
+    password: 'password'
+  },
+    {
+    provider: 'local',
+    name: 'eddy',
+    email: 'eddy.hernandez@rackspace.com',
+    password: 'password'
+  },
+  {
+    provider: 'local',
+    name: 'chris',
+    email: 'chris.burrell@rackspace.com',
+    password: 'password'
+  },
+  {
     provider: 'local',
     role: 'admin',
     name: 'Admin',
@@ -47,3 +79,14 @@ User.find({}).remove(function() {
     }
   );
 });
+
+
+
+
+
+
+
+
+
+
+

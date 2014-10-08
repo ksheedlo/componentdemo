@@ -20,11 +20,15 @@
       <!-- injector:css -->
       <!-- endinjector -->
     <!-- endbuild -->
+    <!-- <link rel="stylesheet" href="https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com/v1-latest//canon.min.css"> -->
   </head>
   <body ng-app="componentdemoApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <div ng-include="'components/navbar/navbar.html'"></div>
+
 
     <!-- Add your site or application content here -->
     <div ui-view=""></div>
@@ -46,6 +50,18 @@
     <![endif]-->
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/angular-socket-io/socket.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/reflux/dist/reflux.js"></script>
+      <script src="bower_components/velocity/velocity.js"></script>
+      <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+      <script src="bower_components/rs-popover/dist/rs-popover.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
@@ -53,6 +69,31 @@
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/account/account.js"></script>
+          <script src="app/account/login/login.controller.js"></script>
+          <script src="app/account/settings/settings.controller.js"></script>
+          <script src="app/account/signup/signup.controller.js"></script>
+          <script src="app/admin/admin.controller.js"></script>
+          <script src="app/admin/admin.js"></script>
+          <script src="app/main/main.controller.js"></script>
+          <script src="app/main/main.js"></script>
+          <script src="app/templates.js"></script>
+          <script src="components/Config/thingInfoPopoverConfig/thingInfoPopoverConfig.service.js"></script>
+          <script src="components/Config/thingInfoPopoverConfig/thingInfoPopoverConfigAlt.service.js"></script>
+          <script src="components/Config/thingListConfig/thingListConfig.service.js"></script>
+          <script src="components/Config/thingListItemConfig/thingListItemConfig.service.js"></script>
+          <script src="components/Config/thingListItemConfig2/thingListItemConfig2.service.js"></script>
+          <script src="components/Data/ThingData/ThingData.service.js"></script>
+          <script src="components/RefluxService/Reflux.service.js"></script>
+          <script src="components/auth/auth.service.js"></script>
+          <script src="components/auth/user.service.js"></script>
+          <script src="components/mongoose-error/mongoose-error.directive.js"></script>
+          <script src="components/navbar/navbar.controller.js"></script>
+          <script src="components/rs/rs-list-item/rs-list-item.directive.js"></script>
+          <script src="components/rs/rs-list/rs-list.directive.js"></script>
+          <script src="components/rs/rs-offcanvas/rs-offcanvas.directive.js"></script>
+          <script src="components/rs/rs-popover/rs-popover.directive.js"></script>
+          <script src="components/socket/socket.service.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
 </body>

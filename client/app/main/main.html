@@ -1,21 +1,44 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
-
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
 
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
-      </ul>
+      <h1 class="page-header">List: All Things</h1>
+
+      <rs-list config="thingListConfig">
+        <rs-list-item config="thingListItemConfig" ng-repeat="thing in things">
+          <div class="rs-list-primary">
+              <div class="rs-tile-content" >
+                <h2>{{thing.name}} - {{thing.userId}}</h2>
+                <p  ng-click="closeAll()" ng-bind-html="thing.info"></p>
+              </div>
+          </div>
+          <div class="rs-list-secondary">
+          <div class="icon-container" rs-offcanvas="customOffcanvas">
+              <i class="fa fa-align-justify"></i>
+            </div>  
+            <div class="icon-container" >
+              <i class="fa fa-info"></i>
+            </div>          
+            <div class="icon-container">
+              <button type="button" class="close" ng-click="deleteThing(thing)">&times;</button>
+            </div>
+          </div>
+        </rs-list-item>
+      </rs-list>
+
+      <button rs-popover-trigger="myPopoverForm">Toggle Me!</button>
+
+      <rs-popover-form id="myPopoverForm">
+      <div class="rs-control-group">
+        <label>Label</label>
+        <div class="rs-controls">
+          <input type="text">
+        </div>
+      </div>
+    </rs-popover-form>
+
     </div>
+
   </div>
 
   <form class="thing-form">

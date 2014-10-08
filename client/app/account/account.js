@@ -17,6 +17,6 @@ angular.module('componentdemoApp')
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
         controller: 'SettingsCtrl',
-        authenticate: true
+        // authenticate: true
       });
   });
