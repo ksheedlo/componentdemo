@@ -12,9 +12,9 @@ angular.module('componentdemoApp')
       },
       link:function (scope, element, attrs, ctrl, transcludeFn) {
 
-        element.bind('mouseenter', function() {
-          console.log('you entered into the element');
-        });
+        // element.bind('mouseenter', function() {
+        //   console.log('you entered into the element');
+        // });
 
         // var Config = attrs.config ? $injector.get(attrs.config) : function(){};
         // Config(scope, element, attrs, ctrl);
